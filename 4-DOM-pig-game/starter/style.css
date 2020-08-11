@@ -141,13 +141,53 @@ i {
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
 
+/* input */
+.winning-score-container {
+    position: absolute;
+    width: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 520px;
+
+    font-size: 20px;
+    font-family: 'Lato';
+    color: #555;
+}
+
+.winning-score-label {
+    text-transform: uppercase;
+    display: inline-block;
+    width: 70px;
+
+}
+
+.winning-score {
+    font: inherit;
+    border: 1px solid #777;
+    text-align: center;
+    padding: 5px;
+    width:80px;
+    margin-left: 10px;
+}
+
+.winning-score:focus {
+    outline: none;
+}
+
+
+/* DICES */
 .dice {
     position: absolute;
     left: 50%;
-    top: 178px;
     transform: translateX(-50%);
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+#dice-0 {
+    top: 120px;
+}
+#dice-1 {
+    top: 250px;
 }
 
 .winner { background-color: #f7f7f7; }
