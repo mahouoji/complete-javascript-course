@@ -2,16 +2,16 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: ['babel-polyfill', './src/js/index.js'],
+    entry: ['./src/js/index.js'],
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'dist'), // full path
         filename: 'js/bundle.js'
     },
     devServer: {
         contentBase: './dist'
     },
     plugins: [
-        new HtmlWebpackPlugin({
+        new HtmlWebpackPlugin({ // copy index.html and inject script
             filename: 'index.html',
             template: './src/index.html'
         })
@@ -19,8 +19,8 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
+                test: /\.js$/,              // js files
+                exclude: /node_modules/,    // exclude those in node_modules
                 use: {
                     loader: 'babel-loader'
                 }
